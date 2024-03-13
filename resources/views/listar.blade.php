@@ -11,10 +11,10 @@
 
     <body>
 <div class="container">
-  <div class="row align-items-start">
+  <div class="row">
     <div class="col">
-          <nav class="navbar navbar-expand bg-primary">
-              <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg bg-body-tertiary">
+              <div class="container-fluid text-bg-primary p-3">
                   <a class="navbar-brand text-light" href="#" >SISTEMA WEB</a>
                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                        <span class="navbar-toggler-icon"></span>
@@ -36,9 +36,10 @@
            <p align="left"><font size="4">Sistema utilizado para agedamento de serviços</font></p>
            <p>
            <div class="col">
+           <div class="overflow-auto">
            <table class="table">
                <thead class="table-primary">
-                   <tr>
+               <tr>
                       <th scope="col">Nome</th>
                       <th scope="col">Telefone</th>
                       <th scope="col">Origem</th>
@@ -70,6 +71,7 @@
                    </tr>
                </tbody>
              </table>
+             </div>
             </div>
          </div>
      </div>
