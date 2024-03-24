@@ -37,7 +37,7 @@
            
 <div class="container mt-5">
         <form method="POST" action="/adicionarContato">
-            @csrf
+            <?php echo csrf_field(); ?>
            <div class="form-group mb-2">
                 <label for="exampleInputNome">Nome</label>
                     <input type="text" class="form-control" name="nome" >
@@ -66,3 +66,4 @@
 </div>
 </body>
 </html>
+<?php /**PATH C:\xampp\htdocs\Integra-o_PHP-main\resources\views/pmprojet.blade.php ENDPATH**/ ?>
