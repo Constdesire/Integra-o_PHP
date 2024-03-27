@@ -22,4 +22,30 @@ class ContatoController extends Controller
         $contact->save();
         return redirect()->back();
     }
+
+    public function editar($id){
+        $contact = Contato::find($id);
+        return view('editar')->with("contato", $contact);
+    }
+
+    public function atualizar(Request $req){
+        $contact = Contato::find-($req->$id);
+        $contact->update(
+            [
+        "nome" => $req->nome,
+        "telefone" => $req->telefone,
+        "origem" => $req->origem,
+        "datacontato" => $req->datacontato,
+        "observacao" => $req->observacao,
+            ]
+            );
+            
+        return redirect()->back();
+    }
+
+    public function excluir(Request $req){
+        $contact = Contato::find-($req->$id);
+        $contact->delete();
+        return redirect()->back();
+    }
 }
