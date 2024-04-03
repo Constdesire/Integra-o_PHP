@@ -20,7 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `projectweb1`
 --
-
+Create database `projectweb1`;
+use `projectweb1`;
 -- --------------------------------------------------------
 
 --

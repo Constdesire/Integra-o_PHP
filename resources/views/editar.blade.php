@@ -32,34 +32,34 @@
                   </div>
             </div>
            <p> 
-           <p align="left"><font size="5">Cadastrar -  Agendamento de Potenciais Clientes</p></font>
+           <p align="left"><font size="5">Editar -  Agendamento de Potenciais Clientes</p></font>
            <p align="left"><font size="4">Sistema utilizado para agedamento de serviços</font></p>
            
            <div class="container mt-5">
-        <form method="POST" action="/editar/{{$contato->id}}">
+        <form method="POST" action="/editar/{{$contatos->id}}">
             @csrf
            <div class="form-group mb-2">
                 <label for="exampleInputNome">Nome</label>
-                    <input type="text" class="form-control" name="nome" value= "{{$contact->nome}}" >
+                    <input type="text" class="form-control" name="nome" value= "{{$contatos->nome}}" >
            </div>
            <div class="form-group mb-2">
                 <label for="formGroupExampleInput2" >Telefone</label>
-                    <input type="text" class="form-control" name="telefone" value= "{{$contact->telefone}}" placeholder="(XX)XXXXX-XXXX" >
+                    <input type="text" class="form-control" name="telefone" value= "{{$contatos->telefone}}" placeholder="(XX)XXXXX-XXXX" >
            </div>
            <div class="form-group mb-2">
                 <label for="formGroupExampleInput2" >Origem</label>
-                <select id="inputState" class="form-select" name="origem" value= "{{$contact->origem}}">
+                <select id="inputState" class="form-select" name="origem" value= "{{$contatos->origem}}">
                     <option selected>Celular</option>
                     <option>Telefone fixo</option> 
                 </select>
            </div>
            <div class="form-group mb-2">
                 <label for="formGroupExampleInput2">Data do Contato</label>
-                    <input type="text" class="form-control" name="datacontato" value= "{{$contact->datacontato}}" placeholder="XXXX/XX/XX">
+                    <input type="text" class="form-control" name="datacontato" value= "{{$contatos->datacontato}}" placeholder="XXXX/XX/XX">
            </div>
            <div class="form-group mb-2">
                 <label for="exampleFormControlTextarea1">Observação</label>
-                     <textarea class="form-control" rows="3" name="observacao"></textarea>
+                     <textarea class="form-control" rows="3" name="observacao" value= "{{$contatos->observacao}}"></textarea>
            </div>
            <button type="submit" class="btn btn-primary">Cadastrar</button> 
       </form>

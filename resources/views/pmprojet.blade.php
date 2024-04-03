@@ -64,5 +64,37 @@
            <button type="submit" class="btn btn-primary">Cadastrar</button> 
       </form>
 </div>
+<div class="overflow-auto">
+           <table class="table">
+               <thead class="table-primary">
+               <tr>
+                      <th scope="col">Id</th>
+                      <th scope="col">Nome</th>
+                      <th scope="col">Telefone</th>
+                      <th scope="col">Origem</th>
+                      <th scope="col">Data do contato</th>
+                      <th scope="col">Observações</th>
+                   </tr>
+               </thead>
+               <tbody>
+                @if (count($contatos) > 0)
+                   @foreach ($contatos as $cont)
+                   <tr>
+                       <th>{{ $cont->id }}</th>
+                       <th>{{ $cont->nome }}</th>
+                       <th>{{ $cont->telefone }}</th>
+                       <th>{{ $cont->origem }}</th>
+                       <th>{{ $cont->datacontato }}</th>
+                       <th>{{ $cont->observacao }}</th>
+                       <th><a href = "/editar/{{ $cont->id }}" class = "btn btn-primary">Editar</a>
+                           <a href = "/excluir/{{ $cont->id }}" class = "btn btn-primary">Excluir</a>
+                        </th>
+                    <tr>
+                   @endforeach
+                      @else
+                         <tr>
+                           <th>Sem registros!</th>
+                         </tr>
+                @endif
 </body>
 </html>
